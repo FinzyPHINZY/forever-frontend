@@ -35,4 +35,5 @@ export default [
       ],
     },
   },
+  react/prop-types: 0
 ]
