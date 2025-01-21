@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Title from './Title';
 import { useState, useEffect } from 'react';
+import ProductItem from './ProductItem';
 
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
@@ -9,7 +10,7 @@ const LatestCollection = () => {
   const [latestProducts, setLatestProducts] = useState([]);
 
   useEffect(() => {
-    setLatestProducts(products.slice());
+    setLatestProducts(products.slice(0, 10));
   }, []);
 
   return (
@@ -20,6 +21,13 @@ const LatestCollection = () => {
           Lorem Ipsum is simply dummy text of the printing and type-setting
           industry
         </p>
+      </div>
+
+      {/* product */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
+        {latestProducts.map((item, i) => (
+          <ProductItem key={i + item.name} product={item} />
+        ))}
       </div>
     </div>
   );
