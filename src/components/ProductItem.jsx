@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import { formatNumberWithCommas } from '../utils/util';
 
 const ProductItem = ({ product }) => {
-  const { _id, name, image, price } = product;
+  const { _id, name, images, price } = product;
   const { currency } = useContext(ShopContext);
   return (
     <Link to={`/product/${_id}`} className="text-gray-700 cursor-pointer">
       <div className="overflow-hidden">
         <img
-          src={image[0]}
+          src={images[0]}
           alt=""
           className="hover:scale-110 transition ease-in-out"
         />

@@ -17,7 +17,7 @@ const Orders = () => {
             key={i}
           >
             <div className="flex items-start gap-6 text-sm">
-              <img src={p.image[0]} alt="" className="w-16 sm:w-20" />
+              <img src={p.images[0]} alt="" className="w-16 sm:w-20" />
               <div className="">
                 <p className="sm:text-base font-medium">{p.name}</p>
                 <div className="flex items-center gap-1 mt-2 text-base text-gray-500">
@@ -44,7 +44,6 @@ const Orders = () => {
           </div>
         ))}
       </div>
-      orders page
     </div>
   );
 };
