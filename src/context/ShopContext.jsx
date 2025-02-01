@@ -43,11 +43,12 @@ const ShopContextProvider = ({ children }) => {
 
     if (token) {
       try {
-        await axios.post(
+        const response = await axios.post(
           `${backendUrl}/api/cart/add`,
           { itemId, size },
           { headers: { Authorization: `Bearer ${token}` } }
         );
+        toast.success(response.data.message);
       } catch (error) {
         console.log(error);
         toast.error(error.message);
@@ -81,7 +82,7 @@ const ShopContextProvider = ({ children }) => {
 
     if (token) {
       try {
-        await axios.get(
+        await axios.post(
           `${backendUrl}/api/cart/update`,
           { itemId, size, quantity },
           { headers: { Authorization: `Bearer ${token}` } }
