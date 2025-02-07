@@ -4,6 +4,18 @@
 
 The **Forever** frontend is a React-based e-commerce web application designed to provide users with a seamless shopping experience. It includes essential features such as product browsing, cart management, order placement, authentication, and more. The project is built using modern web technologies like React, React Router, Tailwind CSS, and Axios for API communication.
 
+### **Links**
+
+- **Admin Panel:** [Forever Admin](https://buyatforever-admin.vercel.app/)
+- **Backend API:** [Forever Backend](https://github.com/FinzyPHINZY/forever-backend)
+
+```
+test admin with
+
+email: 'finzyphinzy@gmail.com' ,
+password: 22334455
+```
+
 ## Features
 
 - **User Authentication:** Login and Signup system with token-based authentication.
